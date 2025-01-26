@@ -1,7 +1,6 @@
-<html><head><base href="#home">
 <title>Tahmid Shahriar - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&amp;display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
@@ -22,6 +21,11 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 header {
@@ -44,14 +48,14 @@ header {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 1;
+    opacity: 0.4;
 }
 
 .square {
     position: absolute;
-    background: linear-gradient(45deg, pink, yellow);
+    background: linear-gradient(45deg, black, gray);
     border-radius: 5px;
-    animation: float 15s infinite ease-in-out;
+    animation: float 13s infinite ease-in-out;
     opacity: 0.8; 
 }
 
@@ -115,9 +119,16 @@ nav {
     right: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
-    transition: background-color 0.3s ease;
-    padding: 10px 0;
+    background: rgba(255,255,255,0.95); 
+    transition: transform 0.3s ease;
+    padding: 10px 20px;
+    transform: translateY(0);
+    display: flex;
+    align-items: center;
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
 }
 
 nav ul {
@@ -246,7 +257,7 @@ footer {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #ca78fa;
+    color: gray;
 }
 
 .social-icons a:active {
@@ -433,6 +444,178 @@ footer.visible {
         font-size: 14px;
     }
 }
+
+.education-title, .about-me-title {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+.timeline, .about-me-content {
+  width: 100%;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.section-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .section-title {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(180deg, gray, black);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background: linear-gradient(45deg, gray, black);
+  border: 4px solid #fff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: white;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, black, white) 1;
+  border-radius: 30px;
+  position: relative;
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .timeline-item::after {
+    left: 15px;
+  }
+  
+  .timeline-item:nth-child(even)::after {
+    left: 15px;
+  }
+}
+
+.footer-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        left: 10px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+}
+
+.about-me-content p {
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -442,14 +625,17 @@ footer.visible {
             <div class="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
+            <div class="logo">
+                <img src="/Ts.png" alt="Logo">
+            </div>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home" class="active"></a></li>
               
                 <li class="dropdown">
                     <a href="https://www.facebook.com/xcviox" target="_blank">Facebook</a>
                     
                 </li>
-                <li><a href="https://api.whatsapp.com/send?phone=8801730879261">Contact</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=8801730879261">Whatsapp</a></li>
             </ul>
         </div>
     </nav>
@@ -470,10 +656,64 @@ footer.visible {
         <div class="animated-background">
             <!-- Squares will be added here dynamically -->
         </div>
-        <h1 class="magnetic">Hi, I'm Tahmid</h1>
+        <h1 class="magnetic">Hi, I&apos;m Tahmid</h1>
         <p><i class="fas fa-map-marker-alt"></i> Joypurhat, Bangladesh</p>
         <p>Currently works as a <span id="typing-text"></span></p>
     </header>
+
+    <section class="education-section">
+      <div class="section-grid">
+        <div class="section-title">
+          <h2 class="education-title">- Education -</h2>
+        </div>
+        <div class="section-content">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Secondary School </h3>
+                <p>Science<br>
+                2020 - 2022</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Higher Secondary</h3>
+                <p>Science<br>
+                2023 - 2024</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <h3>Comming Soon ..</h3>
+                <p>-<br>
+                --</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me-section">
+      <div class="section-grid">
+        <div class="section-title">
+          <h2 class="about-me-title">- About Me -</h2>
+        </div>
+        <div class="section-content">
+          <div class="about-me-content">
+            <p>Hi, I&apos;m Tahmid, an aspiring engineer with a passion for technology and creativity. Currently, I&#x2019;m preparing for my engineering admission while working on exciting projects like building an IR receiver and sender using ESP8266. My interests also extend to graphic design, where I enjoy blending aesthetics with functionality to create visually appealing and meaningful designs.
+
+I&#x2019;m deeply fascinated by emerging technologies like cryptocurrency and blockchain, as well as the innovative use of tech in storytelling&#x2014;particularly in shows like Alice in Borderland. Exploring how creativity and technology intersect is what drives me in both my projects and designs.
+
+When I&#x2019;m not designing or tinkering with gadgets, I love listening to music on my trusty AirPods, learning about health and personal growth, or engaging in meaningful conversations.
+
+Feel free to connect if you share similar interests or have something inspiring to discuss!
+
+</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <main>
         <!-- Main content removed as per request -->
@@ -481,6 +721,7 @@ footer.visible {
 
     <footer>
         <div class="container footer-content">
+            <h2 class="footer-title">- Contact &amp; Explore -</h2>
             <div class="social-icons">
                 <a href="https://www.facebook.com/xcviox" target="_blank" rel="noopener noreferrer" title="Facebook">
                     <i class="fab fa-facebook"></i>
@@ -492,172 +733,181 @@ footer.visible {
                     <i class="fab fa-behance"></i>
                 </a>
             </div>
-            <p class="copyright">&copy; 2023 Tahmid Shahriar. All rights reserved.</p>
+            <p class="copyright">&#xa9; 2025 Tahmid Shahriar. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const navLinks = document.querySelectorAll('nav a');
-            const sections = document.querySelectorAll('main section, header');
-            const menuIcon = document.querySelector('.menu-icon');
-            const navUl = document.querySelector('nav ul');
-            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-            const closeIcon = document.querySelector('.mobile-menu-overlay .close-icon');
-            const dropdowns = document.querySelectorAll('.mobile-menu-overlay .dropdown');
-            const header = document.querySelector('header');
-            const headerContent = header.querySelector('h1');
-            const footer = document.querySelector('footer');
-            const footerObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        footer.classList.add('visible');
-                        footerObserver.unobserve(footer);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            function setActiveLink() {
-                let index = sections.length;
-
-                while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
-                
-                navLinks.forEach((link) => link.classList.remove('active'));
-                navLinks[index].classList.add('active');
-            }
-
-            setActiveLink();
-            window.addEventListener('scroll', setActiveLink);
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.getAttribute('href').startsWith('#')) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href').substring(1);
-                        const targetSection = document.getElementById(targetId);
-                        
-                        if (targetSection) {
-                            window.scrollTo({
-                                top: targetSection.offsetTop - 70,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                    if (window.innerWidth <= 768) {
-                        mobileMenuOverlay.classList.remove('active');
-                    }
-                });
-            });
-
-            menuIcon.addEventListener('click', function() {
-                mobileMenuOverlay.classList.toggle('active');
-                setTimeout(() => {
-                    mobileMenuOverlay.style.borderRadius = mobileMenuOverlay.classList.contains('active') ? '0' : '100% 200% 100% 200%';
-                }, 50);
-            });
-
-            closeIcon.addEventListener('click', function() {
-                mobileMenuOverlay.classList.remove('active');
-            });
-
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        this.classList.toggle('active');
-                    }
-                });
-            });
-
-            document.addEventListener('click', function(e) {
-                if (!mobileMenuOverlay.contains(e.target) && !menuIcon.contains(e.target)) {
-                    mobileMenuOverlay.classList.remove('active');
-                }
-            });
-
-            const mobileMenuLinks = mobileMenuOverlay.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuOverlay.classList.remove('active');
-                });
-            });
-
-            const animatedBackground = document.querySelector('.animated-background');
-            const numberOfSquares = 20;
-            const squares = [];
-
-            for (let i = 0; i < numberOfSquares; i++) {
-                const square = document.createElement('div');
-                square.classList.add('square');
-                square.style.width = `${Math.random() * 20 + 10}px`;
-                square.style.height = square.style.width;
-                square.style.left = `${Math.random() * 100}%`;
-                square.style.top = `${Math.random() * 100}%`;
-                square.style.animationDelay = `${Math.random() * 15}s`;
-                animatedBackground.appendChild(square);
-                squares.push(square);
-            }
-
-            footerObserver.observe(footer);
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navUl.style.display = 'block';
-                } else {
-                    navUl.style.display = 'none';
-                }
-            });
-
-            header.addEventListener('mousemove', (e) => {
-                const rect = header.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const deltaX = (x - centerX) / centerX;
-                const deltaY = (y - centerY) / centerY;
-                
-                const tiltX = deltaY * 10; 
-                const tiltY = -deltaX * 10; 
-                
-                headerContent.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-            });
-
-            header.addEventListener('mouseleave', () => {
-                headerContent.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-            });
-
-            function typeWriter(text, i, fnCallback) {
-              if (i < text.length) {
-                document.querySelector("#typing-text").innerHTML = '<span style="background: linear-gradient(to right, #FF1493, #87CEFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">' + text.substring(0, i+1) + '</span><span aria-hidden="true"></span>';
-                setTimeout(function() {
-                  typeWriter(text, i + 1, fnCallback)
-                }, 100);
-              } else if (typeof fnCallback == 'function') {
-                setTimeout(fnCallback, 700);
-              }
-            }
-
-            function startTextAnimation(i) {
-              const phrases = [
-                "Graphic Designer",
-                "social media expert"
-              ];
-              if (i < phrases.length) {
-                typeWriter(phrases[i], 0, function() {
-                  setTimeout(function() {
-                    document.querySelector("#typing-text").innerHTML = '';
-                    startTextAnimation(i + 1);
-                  }, 1000);
-                });
-              } else {
-                startTextAnimation(0);
-              }
-            }
-
-            startTextAnimation(0);
-        });
-    </script>
+    <script>document.addEventListener('DOMContentLoaded', event => {
+  const navLinks = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('main section, header');
+  const menuIcon = document.querySelector('.menu-icon');
+  const navUl = document.querySelector('nav ul');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+  const closeIcon = document.querySelector('.mobile-menu-overlay .close-icon');
+  const dropdowns = document.querySelectorAll('.mobile-menu-overlay .dropdown');
+  const header = document.querySelector('header');
+  const headerContent = header.querySelector('h1');
+  const footer = document.querySelector('footer');
+  const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.classList.add('visible');
+        footerObserver.unobserve(footer);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector('nav');
+  function setActiveLink() {
+    let index = sections.length;
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    navLinks.forEach(link => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
+  }
+  setActiveLink();
+  window.addEventListener('scroll', () => {
+    setActiveLink();
+    if (window.scrollY > lastScrollY) {
+      nav.classList.add('nav-hidden');
+    } else {
+      nav.classList.remove('nav-hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      }
+      if (window.innerWidth <= 768) {
+        mobileMenuOverlay.classList.remove('active');
+      }
+    });
+  });
+  menuIcon.addEventListener('click', function () {
+    mobileMenuOverlay.classList.toggle('active');
+    setTimeout(() => {
+      mobileMenuOverlay.style.borderRadius = mobileMenuOverlay.classList.contains('active') ? '0' : '100% 200% 100% 200%';
+    }, 50);
+  });
+  closeIcon.addEventListener('click', function () {
+    mobileMenuOverlay.classList.remove('active');
+  });
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.classList.toggle('active');
+      }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!mobileMenuOverlay.contains(e.target) && !menuIcon.contains(e.target)) {
+      mobileMenuOverlay.classList.remove('active');
+    }
+  });
+  const mobileMenuLinks = mobileMenuOverlay.querySelectorAll('a');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      mobileMenuOverlay.classList.remove('active');
+    });
+  });
+  const animatedBackground = document.querySelector('.animated-background');
+  const numberOfSquares = 20;
+  const squares = [];
+  for (let i = 0; i < numberOfSquares; i++) {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.style.width = `${Math.random() * 20 + 10}px`;
+    square.style.height = square.style.width;
+    square.style.left = `${Math.random() * 100}%`;
+    square.style.top = `${Math.random() * 100}%`;
+    square.style.animationDelay = `${Math.random() * 15}s`;
+    animatedBackground.appendChild(square);
+    squares.push(square);
+  }
+  footerObserver.observe(footer);
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) {
+      navUl.style.display = 'block';
+    } else {
+      navUl.style.display = 'none';
+    }
+  });
+  header.addEventListener('mousemove', e => {
+    const rect = header.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const deltaX = (x - centerX) / centerX;
+    const deltaY = (y - centerY) / centerY;
+    const tiltX = deltaY * 10;
+    const tiltY = -deltaX * 10;
+    headerContent.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  });
+  header.addEventListener('mouseleave', () => {
+    headerContent.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+  });
+  function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+      document.querySelector("#typing-text").innerHTML = '<span style="background: linear-gradient(to right, #FF1493, #87CEFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">' + text.substring(0, i + 1) + '</span><span aria-hidden="true"></span>';
+      setTimeout(function () {
+        typeWriter(text, i + 1, fnCallback);
+      }, 100);
+    } else if (typeof fnCallback == 'function') {
+      setTimeout(fnCallback, 700);
+    }
+  }
+  function startTextAnimation(i) {
+    const phrases = ["Graphic Designer", "social media expert"];
+    if (i < phrases.length) {
+      typeWriter(phrases[i], 0, function () {
+        setTimeout(function () {
+          document.querySelector("#typing-text").innerHTML = '';
+          startTextAnimation(i + 1);
+        }, 1000);
+      });
+    } else {
+      startTextAnimation(0);
+    }
+  }
+  startTextAnimation(0);
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const aboutMeItems = document.querySelectorAll('.about-me-content p');
+  aboutMeItems.forEach(item => {
+    item.style.opacity = 0;
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = 'all 0.5s ease-out';
+  });
+  const timelineObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+  timelineItems.forEach(item => {
+    item.style.opacity = 0;
+    item.style.transform = item.offsetLeft < window.innerWidth / 2 ? 'translateX(-50px)' : 'translateX(50px)';
+    item.style.transition = 'all 0.5s ease-out';
+    timelineObserver.observe(item);
+  });
+  aboutMeItems.forEach(item => {
+    timelineObserver.observe(item);
+  });
+});</script>
 </body></html>
