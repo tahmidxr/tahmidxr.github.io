@@ -288,15 +288,13 @@ nav a[href="#home"].active {
     right: -100%;
     width: 80%;
     height: 100%;
-    background-image: linear-gradient(to bottom, #9af8d9, #8af6ff, #a9eeff, #dae3ff, #fedaff);
     z-index: 1001;
-    transition: right 0.8s cubic-bezier(0.68, -0.35, 0.50, 1.50);
+    overflow-x: hidden; /* Add this line */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top-left-radius: 100% 200%;
-    border-bottom-left-radius: 100% 200%;
 }
+
 
 .mobile-menu-overlay.active {
     right: 0;
