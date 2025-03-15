@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahmid - Portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Emblema+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dosis:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="color-points">
+        <div class="point" style="background: #FF00FF ; top: 20%; left: 20%; animation-delay: 0s;"></div>
+        <div class="point" style="background: #dd78ff; top: 60%; left: 60%; animation-delay: -5s;"></div>
+        <div class="point" style="background: #ff007f; top: 80%; left: 30%; animation-delay: -10s;"></div>
+        <div class="point" style="background: #0F0F1D; top: 40%; left: 70%; animation-delay: -15s;"></div>
+    </div>
+    <svg style="position: absolute; width: 0; height: 0;">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="gooey" />
+            </filter>
+        </defs>
+    </svg>
+
+    <nav>
+        <div class="logo">tahmid.</div>
+        <div class="menu-toggle">
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="https://facebook.com/xcviox" target="_blank">Facebook</a>
+            <a href="https://wa.me/+8801730879261" target="_blank">WhatsApp</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>hi, I'm tahmid</h1>
+        <div class="location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"/>
+            </svg>
+            <span>Joypurhat, Bangladesh</span>
+        </div>
+        <div class="typing-container">
+            <span>Currently working as </span></br>
+            <span class="typing"></span>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>- About Me -</h2>
+        <p>Hey there! I'm Tahmid, a passionate graphic designer and developer who loves bringing ideas to life through design and code. My journey started with pure curiosity—tinkering with visuals, experimenting with colors, and slowly diving into the world of UI/UX-friendly, minimalistic designs.</br></br>
+
+I believe that great design isn’t just about looking good—it’s about making people feel something. Whether I’m creating sleek, modern graphics or building functional web experiences with HTML, CSS, and JavaScript, my goal is always the same: to make things simple, beautiful, and intuitive.
+          
+         </br></br> If you’re looking for someone to craft a compelling design or a clean, responsive website that speaks to your audience—let’s connect!</p>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <div class="education-timeline">
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>Secondary School Certificate</h3>
+                    <p class="institution">R.B Govt. High School</p>
+                    <p class="year">2020-2022</p>
+                    <p class="description">Complete my secondary school in Science group</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>Higher Secondary Certificate</h3>
+                    <p class="institution">Joypurhat Govt. College</p>
+                    <p class="year">2023 - 2024</p>
+                    <p class="description">Science Group with excellent academic performance.</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>loading</h3>
+                    <p class="institution"> </p>
+                    <p class="year"> </p>
+                    <p class="description"> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-header">
+                    <span>AI Tools</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" data-width="70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Photoshop</span>
+                    <span>40%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" data-width="40%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Illustrator</span>
+                    <span>40%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" data-width="40%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Canva</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Pixellab</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" data-width="90%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <footer>
+        <div class="contact-section">
+            <h3>Get In Touch</h3>
+            <form id="emailForm" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+        <div class="social-icons">
+            <div class="social-section">
+                <h4 class="social-section-title">Connect on Facebook</h4>
+                <a href="https://www.facebook.com/xcviox">
+                    <i class="fab fa-facebook"></i>
+                    <div class="social-title">Follow Me</div>
+                </a>
+            </div>
+            <div class="social-section">
+                <h4 class="social-section-title">Connect on Telegram</h4>
+                <a href="https://t.me/im_tahmid">
+                    <i class="fab fa-telegram"></i>
+                    <div class="social-title">Message Me</div>
+                </a>
+            </div>
+            <div class="social-section">
+                <h4 class="social-section-title">Connect on WhatsApp</h4>
+                <a href="https://api.whatsapp.com/send?phone=8801730879261">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="social-title">Chat with Me</div>
+                </a>
+            </div>
+            <div class="social-section">
+                <h4 class="social-section-title">See My Designs</h4>
+                <a href="https://www.behance.net/Tahmid-shahriar">
+                    <i class="fab fa-behance"></i>
+                    <div class="social-title">View Portfolio</div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
